@@ -103,10 +103,7 @@ input{
     rgba(255, 255, 255, 0.3)
   );
 }
-.image-content{
-    width: 150px;
-    height: fit-content
-}
+
 .box-content{
     display: flex;
     flex-direction: column;
@@ -130,4 +127,9 @@ span small{
 
 small{
     opacity: 0.5;
+}
+
+.icon-container{
+    width: 150px;
+    height: 150px;
 }
