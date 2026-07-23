@@ -24,7 +24,13 @@
         </header>
         <main>
             <header>
-                <input placeholder="Busca una ciudad">
+                <form role="search" id="form-busqueda">
+                    <input name="ciudad" type="text" placeholder="Busca una ciudad">
+                </form>
+                
+                <div class="box-results">
+                    <ul id="search-results"></ul>
+                </div>
             </header>
 
             <div class="glass-box">
@@ -36,7 +42,7 @@
                     
                 </div>
                 <div class="icon-container">
-                    <weather-icon data-value="cloudy"></weather-icon>
+                    <weather-icon data-value=""></weather-icon>
                 </div>
                 
             </div>

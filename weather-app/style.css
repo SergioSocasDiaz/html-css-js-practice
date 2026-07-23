@@ -133,3 +133,46 @@ small{
     width: 150px;
     height: 150px;
 }
+
+
+.box-results{
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+
+        width: 300px;
+    height: auto;
+    background-color: var(--neutral);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 1px black;
+    padding: 5px;
+    display: none;
+
+}
+
+
+main > header{
+    position: relative;
+}
+
+li{
+    list-style: none;
+    width: 100%;
+    padding: 3px;
+    border-radius:8px;
+
+    &:hover{
+        background-color: var(--neutral-light) ;
+    }
+
+    
+}
+
+
+.visible{
+    display: block;
+}
+
+.invisible{
+    display: none;
+}
