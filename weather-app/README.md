@@ -5,3 +5,4 @@ For the development of this app we will be using 2 free API's. [Open-Meteo-Weath
 
 The **Geocoding** API we will be used to extract coordinates from the requested city by the user, and afterwards that coordinates will fetch data from de **Weather** API to be shown in the UI.
 
+![alt text](image.png)

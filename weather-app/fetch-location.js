@@ -4,7 +4,7 @@ const searchResults = document.querySelector('#search-results')
 
 const boxResults = document.querySelector('.box-results')
 
-const form = document.querySelector('#form-busqueda')
+
 
 let temporizador
 
@@ -30,8 +30,8 @@ input.addEventListener('input',()=> {
     
 })
 
-function tratadoDeBusqueda(busqueda){
-    return busqueda.replace(' ','+')
+export function tratadoDeBusqueda(busqueda){
+    return busqueda.trim().replace(' ','+')
 }
 
 function llamadaDatosGeoBusqueda(name){
@@ -73,7 +73,7 @@ function crearElementosLista(datos){
     })
 }
 
-function vaciarListaBusqueda(){
+export function vaciarListaBusqueda(){
     searchResults.innerHTML= ''
 }
 
@@ -83,26 +83,10 @@ function vaciarListaBusqueda(){
 
 searchResults.addEventListener('click',(evento)=>{
     if(evento.target.classList.contains('option-search')){
-        input.value = evento.target.textContent 
+        input.value = evento.target.textContent.split('|')[0].trim() 
     }
 })
 
 
-form.addEventListener('submit',async (evento)=>{
-    evento.preventDefault()
-    
-    const datos = new FormData(evento.target)
-    const nombreBusqueda = tratadoDeBusqueda(datos.get('ciudad'))
 
-    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${nombreBusqueda}&count=1&language=es&format=json`)
-    .then((ciudad)=>{
-        return ciudad.json()
-    }).then((ciudad)=>{
-        const eleccion = ciudad.results
-        console.log(eleccion)
-        //? Coger unicamente los datos que nos interesan y posteriormente hacer una llamada a la otra API
-        //! SI es UNdefined no hemos encontrado nada, cargamos la default (Eg:Madrid)
-    })
-
-})
 

@@ -5,7 +5,7 @@ class WeatherIcon extends HTMLElement{
         // Aislamos el DOM
         this.attachShadow({mode: 'open'})
         // Soleado:0 SemiNublado:1 Nublado:2 Lluvia:3 Tormenta:4
-        this.icons = ['sunny','semicloudy','cloudy','cloud-storm','cloud-rain']
+        this.icons = ['sunny','semicloudy','cloudy','stormy','rainy']
     }
     
     render(){

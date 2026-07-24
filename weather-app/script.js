@@ -1,2 +1,3 @@
 import "./web-components.js"
-import "./fecth-location.js"
+import "./fetch-location.js"
+import "./fetch-weather.js"
