@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather-App</title>
+        <meta
+        name="description"
+        content="Encuentra la temperatura de la ciudad a tu elección"
+        />
+        <meta name="robots" content="index,follow">
+
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" type="image/jpg" href="./images/icon.png"> <!--Pendiente de hacer-->
+        <link rel="stylesheet" href="./style.css">
+        <script defer type="module" src="./script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Aero-Weather</h1>
+            <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brightness-2">
+	                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+	                <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5l0 -3.5" />
+                    </svg>
+            </button>
+        </header>
+        <main>
+            <header>
+                <form role="search" id="form-busqueda">
+                    <input name="ciudad" type="text" placeholder="Busca una ciudad">
+                </form>
+                
+                <div class="box-results">
+                    <ul id="search-results"></ul>
+                </div>
+                
+            </header>
+
+            <div class="glass-box">
+                <div class="box-content">
+                    <h3 id="city-name"></h3>
+                    <span id="city-temperature"><small id="temperature-unit"></small></span>
+                    <h3 id="city-weathercode"></h3>
+                    <small id="city-precipitation"></small>
+                    
+                </div>
+                <div class="icon-container">
+                    <weather-icon data-value=""></weather-icon>
+                </div>
+                
+            </div>
+        </main>
+    </body>
+</html>
