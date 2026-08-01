@@ -74,7 +74,9 @@ function crearElementosLista(datos){
 }
 
 export function vaciarListaBusqueda(){
+    clearTimeout(temporizador)
     searchResults.innerHTML= ''
+    boxResults.classList.add('invisible')
 }
 
 

@@ -9,14 +9,25 @@ const temperatureUnit = document.querySelector('#temperature-unit')
 const cityWeatherCode = document.querySelector('#city-weathercode')
 const cityPrecipitation = document.querySelector('#city-precipitation')
 const weatherIcon = document.querySelector('weather-icon')
+const glassBox = document.querySelector('.glass-box')
 
-const DEFAULT_CITY = {
 
+let DEFAULT_CITY = {
+    latitude: '40.4165',
+    longitude: '-3.70256',
+    name: 'Madrid'
 }
 
 
+if(localStorage.getItem('last-city')){
+    DEFAULT_CITY = JSON.parse(localStorage.getItem('last-city'))
+}
+
+obtenerClima(DEFAULT_CITY)
+
 form.addEventListener('submit',async (evento)=>{
     evento.preventDefault()
+    vaciarListaBusqueda()
     const datos = new FormData(evento.target)
     const nombreBusqueda = tratadoDeBusqueda(datos.get('ciudad'))
 
@@ -48,7 +59,8 @@ function obtenerClima(eleccion){
     .then((resultado)=>{            
         return resultado.json()
     }).then(async(resultado)=>{
-        console.log(resultado)
+
+
         cityName.textContent = eleccion.name
         // AL hacer esto tambien estamos borrando el small de las unidades
         cityTemperature.innerHTML = `${resultado.current.temperature_2m}<small id="temperature-unit">${resultado.current_units.temperature_2m}</small>`
@@ -61,6 +73,14 @@ function obtenerClima(eleccion){
         
         weatherIcon.render()
 
+        /*if(glassBox.classList.contains('show-up')){
+            glassBox.classList.remove('show-up')
+        }*/
+        glassBox.classList.remove('show-up')
+        void glassBox.offsetWidth;
+        glassBox.classList.add('show-up')
+        
+        localStorage.setItem('last-city',JSON.stringify(eleccion))
     })
 }
 

@@ -14,13 +14,63 @@
     --neutral: #0b121e;
     --neutral-light: #151C28;
 }
+.white-theme{
+    --primary-color: #00A3FF;
+    --secondary-color: #70D1FF;
+    --tertiary-color: #000;
+    --neutral: #7b8593;
+    --neutral-light: #e1e1e1;
 
+
+ 
+}
 body{
     background-color: var(--neutral);
     color: var(--tertiary-color);
-    zoom:110%
+    zoom:110%;
+
+    transition: 2s ease;
 }
+@media(width <=430px){
+    body{
+        zoom:85%
+    }
+}
+
 header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+}
+
+button{
+    position: absolute;
+    right: 15px;
+    padding:3px;
+
+    border-radius: 8px;
+    background-color: var(--neutral);
+
+    
+    transition: 2s ease;
+    transition: transform 300ms ease;
+    
+    border: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+    &:active{
+        transform: scale(1);
+        transition: 1ms;
+    }
+}
+main header{
     display: flex;
     justify-content: center;
     padding-bottom: 10px ;
@@ -31,6 +81,8 @@ main{
     flex-direction: column;
     align-items: center;
     gap:30px;
+
+    
 }
 
 input{
@@ -44,6 +96,8 @@ input{
     color: var(--tertiary-color);
     border: none;
     width: 200px;
+
+    transition: 2s ease;
 
     &:focus{
         outline: none;
@@ -176,4 +230,21 @@ li{
 
 .invisible{
     display: none;
+}
+
+.show-up{
+    animation: show-up 0.5s ease-in-out both
+}
+
+
+@keyframes show-up {
+    0%{
+        transform: translateY(30px);
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
 }
