@@ -27,15 +27,9 @@
 body{
     background-color: var(--neutral);
     color: var(--tertiary-color);
-    zoom:110%;
+    transition: background-color 2s ease;
+}
 
-    transition: 2s ease;
-}
-@media(width <=430px){
-    body{
-        zoom:85%
-    }
-}
 
 header{
     display: flex;
@@ -246,5 +240,87 @@ li{
         transform: translateY(0px);
         opacity: 1;
     }
+
+}
+
+.chart-container{
+    width: 600px;
+    padding: 10px;
+}
+
+.icon-chart-container{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-around;
+
+}
+
+/*@media (width <=600px){
+    .chart-container{
+        width: 500px;
+    }
+    .icon-chart-container{
+        height: 10px;
+        width: 100%;
+    }
+}*/
+
+@media (max-width: 768px){
+    .glass-box{
+        width:100%;
+        max-width: 320px;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        max-height: 400px;
+        gap: 16px;
+        padding: 18px 14px;
+    }
+    .box-content{
+        align-items: center;
+    }
+    .chart-container{
+        width: 95%;
+        max-width: 480px;
+    }
+    .icon-chart-container{
+        padding-left: 40px;
+        justify-content: space-between;
+        padding-right: 30px;
+        
+    }
+    canvas{
+        padding-right: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .glass-box {
+    max-width: 250px;
+    max-height: 320px;
+  }
+
+  .icon-container{
+    width: 40%;
+  }
+
+  .icon-chart-container{
+    height: 30px;
+    padding-left: 35px;
+  }
+
+  .box-content > span {
+    font-size: 2.6rem;
+  }
+
+  span small {
+    font-size: 1.1rem;
+  }
 
 }

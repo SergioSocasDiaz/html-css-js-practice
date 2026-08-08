@@ -11,7 +11,7 @@ const cityPrecipitation = document.querySelector('#city-precipitation')
 const weatherIcon = document.querySelector('weather-icon')
 const glassBox = document.querySelector('.glass-box')
 
-
+export let Rawdata
 let DEFAULT_CITY = {
     latitude: '40.4165',
     longitude: '-3.70256',
@@ -60,7 +60,10 @@ function obtenerClima(eleccion){
         return resultado.json()
     }).then(async(resultado)=>{
 
+        Rawdata = resultado
 
+        document.dispatchEvent(new CustomEvent('weather-data-ready'))
+        
         cityName.textContent = eleccion.name
         // AL hacer esto tambien estamos borrando el small de las unidades
         cityTemperature.innerHTML = `${resultado.current.temperature_2m}<small id="temperature-unit">${resultado.current_units.temperature_2m}</small>`
@@ -85,7 +88,7 @@ function obtenerClima(eleccion){
 }
 
 
-function translateWeatherCodes(code){
+export function translateWeatherCodes(code){
     const codes = {
         sunny: [0],
         semicloudy: [1,2],

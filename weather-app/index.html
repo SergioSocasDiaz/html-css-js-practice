@@ -15,6 +15,7 @@
 
         <link rel="icon" type="image/jpg" href="./images/icon.png"> <!--Pendiente de hacer-->
         <link rel="stylesheet" href="./style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
         <script defer type="module" src="./script.js"></script>
     </head>
 
@@ -53,6 +54,19 @@
                     <weather-icon data-value=""></weather-icon>
                 </div>
                 
+            </div>
+
+            <div class="chart-container">
+                <div class="icon-chart-container">
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                    <weather-icon data-value="" class="weather-chart-icon"></weather-icon>
+                </div>
+                <canvas id="weather-chart"></canvas>
             </div>
         </main>
     </body>
