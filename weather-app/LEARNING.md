@@ -70,3 +70,56 @@ element.classList.add('anim');
 ```
 
 Caution: Forcing reflow impacts performance if repeated, use it only when necessary.
+
+**Form Data**
+
+Use the `FormData` Web API to collect and serialize form inputs . `FormData` reads form controls by name and produces a convenient iterable or key/value access for saving preferences or sending to a backend.
+
+- **Why it's useful:** Simple API for extracting user settings
+
+Example:
+
+```js
+const settingsForm = document.querySelector('#settings');
+settingsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(settingsForm);
+    const units = fd.get('units');
+    const defaultCity = fd.get('defaultCity');
+    localStorage.setItem('units', units);
+    localStorage.setItem('defaultCity', defaultCity);
+});
+```
+
+*Consider validating and normalizing values before saving, and providing user feedback after saving.*
+
+
+**ChartJs**
+
+Chart.js is used to visualize temperature and precipitation trends (daily). Keep chart setup and update logic in `charts.js`.
+
+- **Why it's useful:** Visual summaries help users quickly understand trends and anomalies.
+  
+- **Best practices:**
+    - Initialize charts when we collect all the data using custom Events
+
+[Documentation](https://www.chartjs.org/docs/latest/)
+
+**Scrollbar**
+
+Custom scrollbar styling can improve visual cohesion on desktop browsers.
+
+- **Techniques:** Use CSS pseudo-elements like `::-webkit-scrollbar`, `::-webkit-scrollbar-thumb`, and `scrollbar-color` / `scrollbar-width` for cross-browser support where available.
+
+Example CSS:
+
+```css
+/* style.css */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 6px; }
+scrollbar-color: var(--accent) transparent;
+```
+
+*Avoid hiding scrollbars entirely.*
+
+
