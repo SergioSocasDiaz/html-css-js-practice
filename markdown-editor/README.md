@@ -33,3 +33,7 @@ This project also uses a few small libraries to improve the experience:
 - The layout is responsive
 - The editor keeps the cursor position when adding bold or italic markers.
 - The preview is sanitized before being shown, so unsafe HTML is removed.
+
+## Run
+
+This project is allocated in: [markdown-editor-socas.netlify.app](markdown-editor-socas.netlify.app)
