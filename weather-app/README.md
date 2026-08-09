@@ -26,7 +26,7 @@ The flow:
 
 ## Run
 
-This project is allocated in: **URL**
+This project is allocated in: [weather-app-socas.netlify.app](weather-app-socas.netlify.app)
 
 ## Project Structure
 
@@ -37,6 +37,7 @@ This project is allocated in: **URL**
 - `fetch-weather.js` - weather API integration and DOM updates.
 - `web-components.js` - custom weather icon element.
 - `images/` - weather icons and app assets.
+ - `charts.js` - Chart.js setup and update helpers for visualizing trends.
 
 ## How It Works
 
@@ -79,6 +80,8 @@ The visual design uses a dark theme with bright blue accents and a glassmorphism
 - blur filters
 - soft borders and highlights
 - layered shadows
+
+This project also uses the Chart.js library to render temperature and precipitation trends in the UI (see `charts.js`).
 
 
 ## Notable Implementation Details

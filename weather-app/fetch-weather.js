@@ -36,7 +36,7 @@ form.addEventListener('submit',async (evento)=>{
     const nombreBusqueda = tratadoDeBusqueda(datos.get('ciudad').split('|')[0])
     const pais = datos.get('ciudad').split('|')[1]?.trim()
 
-    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${nombreBusqueda}&count=4&language=es&format=json`)
+    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${nombreBusqueda}&count=10&language=es&format=json`)
     .then((ciudad)=>{
         evento.target.reset()
         vaciarListaBusqueda()

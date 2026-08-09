@@ -14,7 +14,7 @@
 
 # Arreglar paleta de colores ✅
 
-# Problemas a arreglar
+# Problemas a arreglar ✅
 
 Hay que encontrar la manera de poder seleccionar una localización de una manera mejor. Explico caso:
 

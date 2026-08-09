@@ -32,7 +32,7 @@ export function tratadoDeBusqueda(busqueda){
 
 function llamadaDatosGeoBusqueda(name){
     vaciarListaBusqueda()
-    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${name}&count=4&language=es&format=json`)
+    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${name}&count=10&language=es&format=json`)
     .then(datos =>{
         return datos.json()
     }).then(datos=>{

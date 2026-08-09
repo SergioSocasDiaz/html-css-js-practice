@@ -198,14 +198,18 @@ small{
     top: 100%;
     z-index: 1;
 
-        width: 300px;
+    width: 300px;
     height: auto;
+    max-height: 100px;
     background-color: var(--neutral);
     border-radius: 8px;
     box-shadow: 2px 2px 8px 1px black;
     padding: 5px;
     display: none;
 
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) transparent;
 }
 
 
