@@ -1,5 +1,5 @@
 import {tratadoDeBusqueda,vaciarListaBusqueda} from './fetch-location.js'
-
+import {pais} from './fetch-location.js'
 const form = document.querySelector('#form-busqueda')
 
 
@@ -10,6 +10,10 @@ const cityWeatherCode = document.querySelector('#city-weathercode')
 const cityPrecipitation = document.querySelector('#city-precipitation')
 const weatherIcon = document.querySelector('weather-icon')
 const glassBox = document.querySelector('.glass-box')
+const chart = document.querySelector('.chart-container')
+
+
+let eleccion
 
 export let Rawdata
 let DEFAULT_CITY = {
@@ -29,9 +33,10 @@ form.addEventListener('submit',async (evento)=>{
     evento.preventDefault()
     vaciarListaBusqueda()
     const datos = new FormData(evento.target)
-    const nombreBusqueda = tratadoDeBusqueda(datos.get('ciudad'))
+    const nombreBusqueda = tratadoDeBusqueda(datos.get('ciudad').split('|')[0])
+    const pais = datos.get('ciudad').split('|')[1]?.trim()
 
-    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${nombreBusqueda}&count=1&language=es&format=json`)
+    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${nombreBusqueda}&count=4&language=es&format=json`)
     .then((ciudad)=>{
         evento.target.reset()
         vaciarListaBusqueda()
@@ -39,8 +44,13 @@ form.addEventListener('submit',async (evento)=>{
 
         return ciudad.json()
     }).then((ciudad)=>{
-        const eleccion = ciudad.results[0]
-  
+        if(pais){
+            ciudad.results.forEach(element => {
+                if(element.country === pais){ eleccion = element}
+            });
+        }else{
+            eleccion = ciudad.results[0]
+        }
         if (eleccion){
             obtenerClima(eleccion)
         }else{
@@ -76,12 +86,14 @@ function obtenerClima(eleccion){
         
         weatherIcon.render()
 
-        /*if(glassBox.classList.contains('show-up')){
-            glassBox.classList.remove('show-up')
-        }*/
         glassBox.classList.remove('show-up')
+
         void glassBox.offsetWidth;
         glassBox.classList.add('show-up')
+        chart.classList.remove('show-up')
+
+        void chart.offsetWidth;
+        chart.classList.add('show-up')
         
         localStorage.setItem('last-city',JSON.stringify(eleccion))
     })

@@ -42,9 +42,9 @@ myChart = new Chart(canvas,
             plugins:{
                 legend:{
                     display:false,
-                }
-            }
-        }
+                },
+            },
+        },
     }
 )
 for(let i = 0; i<iconsChart.length;i++){

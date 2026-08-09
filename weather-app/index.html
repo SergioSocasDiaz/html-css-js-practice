@@ -23,17 +23,16 @@
         <header>
             <h1>Aero-Weather</h1>
             <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brightness-2">
-	                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-	                <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-	                <path d="M6 6h3.5l2.5 -2.5l2.5 2.5h3.5v3.5l2.5 2.5l-2.5 2.5v3.5h-3.5l-2.5 2.5l-2.5 -2.5h-3.5v-3.5l-2.5 -2.5l2.5 -2.5l0 -3.5" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--tertiary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brightness"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 3l0 18" /><path d="M12 9l4.65 -4.65" /><path d="M12 14.3l7.37 -7.37" /><path d="M12 19.6l8.85 -8.85" /></svg>
             </button>
         </header>
         <main>
             <header>
                 <form role="search" id="form-busqueda">
-                    <input name="ciudad" type="text" placeholder="Busca una ciudad">
+                    <div class="input-container">
+                        <input name="ciudad" type="text" placeholder="Busca una ciudad">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--tertiary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                    </div>
                 </form>
                 
                 <div class="box-results">
@@ -55,7 +54,6 @@
                 </div>
                 
             </div>
-
             <div class="chart-container">
                 <div class="icon-chart-container">
                     <weather-icon data-value="" class="weather-chart-icon"></weather-icon>

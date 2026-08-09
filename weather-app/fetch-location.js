@@ -7,11 +7,7 @@ const boxResults = document.querySelector('.box-results')
 
 
 let temporizador
-
-
-
-
-let seleccion
+export let pais
 
 
 input.addEventListener('input',()=> {
@@ -22,7 +18,7 @@ input.addEventListener('input',()=> {
     if(valorBusqueda !== ''){
         temporizador = setTimeout(()=>{
         //! Los inputs no tienen textContent si no valores
-        llamadaDatosGeoBusqueda(tratadoDeBusqueda(valorBusqueda))
+        llamadaDatosGeoBusqueda(tratadoDeBusqueda(valorBusqueda),pais)
     },500)
     
     }
@@ -85,7 +81,9 @@ export function vaciarListaBusqueda(){
 
 searchResults.addEventListener('click',(evento)=>{
     if(evento.target.classList.contains('option-search')){
-        input.value = evento.target.textContent.split('|')[0].trim() 
+        pais = undefined
+        input.value = evento.target.textContent
+        input.focus()
     }
 })
 
