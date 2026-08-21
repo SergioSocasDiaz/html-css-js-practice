@@ -1,0 +1,21 @@
+[
+  { "id": 1, "label": "C", "type": "clear", "value": "clear" },
+  { "id": 2, "label": "±", "type": "special", "value": "toggle-sign" },
+  { "id": 3, "label": "%", "type": "special", "value": "percent" },
+  { "id": 4, "label": "÷", "type": "operator", "value": "/" },
+  { "id": 5, "label": "7", "type": "number", "value": "7" },
+  { "id": 6, "label": "8", "type": "number", "value": "8" },
+  { "id": 7, "label": "9", "type": "number", "value": "9" },
+  { "id": 8, "label": "×", "type": "operator", "value": "*" },
+  { "id": 9, "label": "4", "type": "number", "value": "4" },
+  { "id": 10, "label": "5", "type": "number", "value": "5" },
+  { "id": 11, "label": "6", "type": "number", "value": "6" },
+  { "id": 12, "label": "-", "type": "operator", "value": "-" },
+  { "id": 13, "label": "1", "type": "number", "value": "1" },
+  { "id": 14, "label": "2", "type": "number", "value": "2" },
+  { "id": 15, "label": "3", "type": "number", "value": "3" },
+  { "id": 16, "label": "+", "type": "operator", "value": "+" },
+  { "id": 17, "label": "0", "type": "number", "value": "0","span":2},
+  { "id": 18, "label": ".", "type": "number", "value": "." },
+  { "id": 19, "label": "=", "type": "equals", "value": "=" }
+]
