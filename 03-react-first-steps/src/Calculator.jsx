@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import {useState } from 'react'
 import {Display} from './components/display.jsx'
 import { ButtonPad } from './components/buttonpad.jsx'
 import './calculator.css'
@@ -39,8 +39,8 @@ export function Calculator() {
       setDisplay(String(result))
 
       // Estos console log imprimen resultados erroneos, ya que 
-      console.log("result" + result)
-      console.log("prevValue" + prevValue)
+      /*console.log("result" + result)
+      console.log("prevValue" + prevValue)*/
     }else{
       setPrevValue(currentValue)
     }
