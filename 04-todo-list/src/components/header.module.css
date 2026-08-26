@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral);
+    padding: 20px 5px 20px 5px;
+}
+
+.button{
+
+    border: none;
+    background-color: transparent;
+    height: 65px;
+    aspect-ratio: 1/1;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
