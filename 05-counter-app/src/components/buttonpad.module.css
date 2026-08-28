@@ -1,0 +1,59 @@
+.div{
+ display: flex;
+ justify-content: space-around;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.bigButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 45%;
+    aspect-ratio: 7/3;
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--neutral);
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.9;
+    }
+
+    &:active{
+        scale:0.95;
+    }
+
+    
+}
+
+.minusButton{
+    
+    background-color: var(--secondary);
+}
+
+.plusButton{
+    background-color: var(--primary);
+}
+
+.resetButton{
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1.15rem;
+    font-family: 'JetBrains Mono';
+    font-weight: 200;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.9;
+    }
+}

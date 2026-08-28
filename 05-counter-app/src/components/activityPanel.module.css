@@ -1,0 +1,30 @@
+.span{
+    font-family: 'JetBrains Mono';
+    font-weight: 200;
+    padding-left: 6px;
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.smallContainer{
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    border-radius: 8px;
+    display: flex;
+    padding: 8px;
+    min-height: 0;
+}
+.invisible{
+    display: none;
+}
+.ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
