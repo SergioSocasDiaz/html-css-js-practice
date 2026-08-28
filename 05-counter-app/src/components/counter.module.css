@@ -1,0 +1,7 @@
+.span{
+    font-weight: 800;
+    font-size: 5.5rem;
+    display: flex;
+    justify-content: center;
+    color: var(--tertiary);
+}

@@ -1,0 +1,11 @@
+.li{
+    background-color: #f0f4ff;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    font-family: 'JetBrains Mono';
+    font-weight: 100;
+    min-height: 30px;
+    justify-content: space-between;
+}
