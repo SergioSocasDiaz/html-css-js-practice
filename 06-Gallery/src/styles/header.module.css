@@ -1,0 +1,42 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.h1{
+    color: var(--primary);
+}
+.nav{
+    display: flex;
+    gap: 1rem;
+}
+.a{
+    font-weight: 400;
+    &:hover{
+        transform: translateY(-0.2rem);
+        color: var(--primary);
+        text-decoration: underline var(--primary) 2px;
+        text-underline-offset: 4px;
+        transition: all 0.1s ease-in-out;
+    }
+}
+.divButton{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+
+    &:hover{
+        cursor: pointer;
+        
+        svg{
+            stroke: var(--primary);
+        }
+    }
+}
+

@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {Header} from './components/Header.jsx'
 import { Counter } from './components/Counter.jsx'
 import { ButtonPad } from './components/ButtonPad.jsx'
@@ -14,7 +14,7 @@ export function App(){
 
   function handlePlus(){
     if(count >=100){ 
-      gooeyToast.warning('You achived the lower limit: 0', {
+      gooeyToast.warning('You achived the highest limit: 100', {
       borderColor: '#E0E0E0',
       borderWidth: 1.5,
       preset: 'smooth',
@@ -44,15 +44,9 @@ export function App(){
     handleActivity('Reset')
   }
   function handleActivity(text){
-    const newActivities = [...activities]
-    if(newActivities.length === 3){
-      newActivities.pop()
-    }
-    newActivities.unshift({
-      text: text,
-      id: crypto.randomUUID()
-    })
-    setActivity(newActivities)
+    
+    const newActivity = {text:text, id:crypto.randomUUID()}
+    setActivity((prev)=>[...newActivity,...prev].slice(0,3))
   }
   
 

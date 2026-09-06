@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.divPrimary{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.divSecondary{
+    display: flex;
+    gap: 1rem;
+}
+
+.a{
+    font-weight: 500;
+}
