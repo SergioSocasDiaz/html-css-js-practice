@@ -8,21 +8,21 @@
 
 .input{
     width: 100%;
-    border: none;
+    border: 1px solid rgba(0,0,0,0.1);
     background-color: var(--over-neutral);
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 1.1rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
 
     &:focus{
-        outline: 1px solid black;
+        outline: none;
     }
 }
 
 .svg{
     position: absolute;
-    right: 5px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
     svg{

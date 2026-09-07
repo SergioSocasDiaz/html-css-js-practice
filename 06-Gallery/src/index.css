@@ -9,7 +9,7 @@
 :root{
     --primary:#2563EB;
     --secondary:#1E293B;
-    --neutral:#F8FAFC;
+    --neutral:#f8f9fb;
     --over-neutral:#f3f4f6;
     --text:#0F172A;
 }
@@ -20,23 +20,20 @@ html{
 
 body{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    background-color: var(--neutral);
 
 }
 
 #root{
     height: 100%;
     width: 100%;
-    background-color: var(--neutral);
+    
 
     display: grid;
-    grid-template-rows: 10vh 1fr 10vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 a{
     cursor: pointer;
-
-    &:hover{
-        color: var(--primary);
-    }
 }

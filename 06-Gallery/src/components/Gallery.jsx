@@ -1,9 +1,14 @@
 import { GalleryItem } from "./GalleryItem.jsx"
-
-export function Gallery(){
+import styles from '../styles/gallery.module.css'
+export function Gallery({products}) {
     return(
-        <div>
-            <GalleryItem></GalleryItem>
+        <div className={styles.container}>
+            {products.map((product)=>{
+                return(
+                    <GalleryItem key={product.id} product={product}/>
+                )
+            })
+        }
         </div>
     )
 }
