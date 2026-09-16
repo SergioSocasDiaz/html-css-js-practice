@@ -1,6 +1,17 @@
 import styles from '../styles/navigation.module.css'
 export function Navigation({totalPages,currentPage, handlePageChange, handleNextPage, handlePrevPage}) {
-    const pages = totalPages > 5 ? [1,2,3,4,5,'...'] : Array.from({length: totalPages}, (_, i) => i + 1)
+    let pages = []
+    if (totalPages > 5  ) {
+        if (currentPage <= 3) {
+            pages = [1,2,3,4,5,'...']
+        }
+        else{
+            pages = ['...',currentPage-2,currentPage-1,currentPage,currentPage+1,currentPage+2,'...']
+        }
+    }else{
+        pages = Array.from({length: totalPages}, (_, i) => i + 1)
+    }
+
     const createPageUrl = (page)=>{
         const url = new URL(window.location)
         url.searchParams.set('page',page)
@@ -22,9 +33,9 @@ export function Navigation({totalPages,currentPage, handlePageChange, handleNext
                 </svg>
             </a>
             {
-                pages.map((page) => (
+                pages.map((page,index) => (
                 <a 
-                    key={page}
+                    key={index}
                     href={page === '...' ? '#' : `${createPageUrl(page)}`}
                     onClick={(event)=>{
                         event.preventDefault()
@@ -32,7 +43,7 @@ export function Navigation({totalPages,currentPage, handlePageChange, handleNext
                             handlePageChange(page)
                         }
                     }} 
-                    className={`${page === currentPage ? `${styles.active} ${styles.a}` : `${styles.a}`} ${page === '...' ? styles.disabled : ''}`}
+                    className={`${page === currentPage ? `${styles.active} ${styles.a}` : `${styles.a}`} ${page === '...' ? `${styles.disabled} ${styles.more}` : ''}`}
                 >
                     {page}
                 </a>
@@ -44,7 +55,7 @@ export function Navigation({totalPages,currentPage, handlePageChange, handleNext
                     event.preventDefault()
                     handleNextPage()
                 }}
-                className={currentPage === totalPages ? `${styles.disabled} ${styles.a}` : `${styles.a}`}
+                className={currentPage === totalPages || totalPages<=1 ? `${styles.disabled} ${styles.a}` : `${styles.a}`}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="var(--text)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
 	            <path stroke="none" d="M0 0h24v24H0z" fill="none" />

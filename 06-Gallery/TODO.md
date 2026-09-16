@@ -13,10 +13,11 @@ Mas bien es mas grande el contenido que la pantalla y es como si estuviera con u
 
 (Tamaños de la imagen, al ser fijas no pueden hacerse mas pequeñas y se  desborda)
 
-# Manejar cuando no se encuentran resultados o la llamada falla
+# Manejar cuando no se encuentran resultados o la llamada falla ✅
 
-# Separar en 2 useEffect, uno para actualizar el textToFilter y el otro para hacer la llamada a la API, asi la navegación es instantanea (En este segundo es donde cambiamos la URL)
+# Separar en 2 useEffect, uno para actualizar el textToFilter y el otro para hacer la llamada a la API, asi la navegación es instantanea (En este segundo es donde cambiamos la URL) ✅
 
 # Ver si se puede cambiaar el numero de resltados por página dependiendo del tamaño de la pantalla
 
-# Renderizar distintas navegaciones. SI estoy en la 7 renderizar [...,5,6,7,8,9,...]
+# Renderizar distintas navegaciones. SI estoy en la 7 renderizar [...,5,6,7,8,9,...] ✅
+Duplicado de puntos ..., Usar otra key porque hay key duplicadas

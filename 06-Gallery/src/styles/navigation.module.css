@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    gap:10px;
+    gap:5px;
 }
 .a{
     color: var(--text);
@@ -31,4 +31,14 @@
     background-color: var(--primary);
     color: var(--neutral);
     pointer-events: none;
+}
+.more{
+    border: none;
+    font-weight: bold;
+    font-size: 0.82rem;
+    padding: 0;
+    opacity: 1;
+    align-items: end;
+    padding: 0px;
+    padding-bottom: 2px;
 }

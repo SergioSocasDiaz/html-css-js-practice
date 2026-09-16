@@ -14,3 +14,4 @@ Para que cuando le demos click a un producto nos lleve a una pagina detallada de
 # Incluir en la URL también la paginación y asi valoramos el render unicamente con la actualización de la URL
 LEMA: Nuevo contenido / sitio: Nueva URL
 # A pesar de nevegar mediante dependencias o custom Hooks mediante la modificación de una URL, debemos incluir el href para una buena estructura semántica, luego en el `onClick` haremos un `event.preventDefault()`
+# Explicar el uso del indice en las keys
