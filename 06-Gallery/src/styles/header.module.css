@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.3rem;
+    position: relative;
 }
 .h1{
     color: var(--primary);
@@ -10,6 +11,11 @@
 .nav{
     display: flex;
     gap: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Top y left toman en cuenta la esquian superior izquierda del elemento, por lo que para centrarlo se debe trasladar la mitad de su tamaño hacia arriba y hacia la izquierda */
+    transform: translate(-50%, -50%);
 }
 .a{
     font-weight: 400;

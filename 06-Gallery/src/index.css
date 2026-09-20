@@ -8,6 +8,7 @@
 
 :root{
     --primary:#2563EB;
+    --primary-light:#e7f4ff;
     --secondary:#1E293B;
     --neutral:#f8f9fb;
     --over-neutral:#f3f4f6;
@@ -42,5 +43,12 @@ a{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+@media (max-width: 600px){
+    html{
+        font-size: 10px;
+    }
 }

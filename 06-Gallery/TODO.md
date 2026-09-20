@@ -21,3 +21,5 @@ Mas bien es mas grande el contenido que la pantalla y es como si estuviera con u
 
 # Renderizar distintas navegaciones. SI estoy en la 7 renderizar [...,5,6,7,8,9,...] ✅
 Duplicado de puntos ..., Usar otra key porque hay key duplicadas
+
+# Terminar de arreglar responsive de hero campaing con el font-size y el rem ✅

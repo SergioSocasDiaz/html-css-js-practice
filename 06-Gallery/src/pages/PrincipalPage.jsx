@@ -1,11 +1,22 @@
 import {Link} from '../components/Link.jsx'
+import {HeroCampaign} from '../components/HeroCampaign.jsx'
+import { useEffect, useState } from 'react'
 export function PrincipalPage() {
     
+    const [mainData, setMainData] = useState(null)
+    useEffect(()=>{
+        const fetchProduct = async () => {
+            await fetch('/heroCampaignMock.json')
+            .then(res => res.json()).then(data => setMainData(data))
+        }
 
+        fetchProduct()
+    },[])
+
+    
     return(
         <>
-            <h1>PAGINA PRINCIPAL</h1>
-            <Link path='/search'>Ir a la pagina de busqueda</Link>
+            <HeroCampaign product={mainData?.hero}/>
         </>
         
     )

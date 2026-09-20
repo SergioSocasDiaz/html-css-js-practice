@@ -1,4 +1,5 @@
 import styles from '../styles/header.module.css'
+import {Link} from './Link.jsx'
 export function Header() {
     return(
         <header className={styles.header}>
@@ -12,7 +13,10 @@ export function Header() {
 	                <path d="M4 18l16 0" />
                     </svg>
                 </button>
-                <h1 className={styles.h1}>LUXE CATALOG</h1>
+                <Link path='/'>
+                    <h1 className={styles.h1}>LUXE CATALOG</h1>
+                </Link>
+                
             </div>
             
 
