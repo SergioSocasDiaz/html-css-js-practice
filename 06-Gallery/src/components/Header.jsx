@@ -1,11 +1,13 @@
 import styles from '../styles/header.module.css'
 import {Link} from './Link.jsx'
-export function Header() {
+export function Header({handleMenuClick}) {
+
+    
     return(
-        <header className={styles.header}>
-            
+        <div style={{position: 'sticky', top: 0, left: 0, width: '100%', zIndex:3, backgroundColor: 'var(--neutral)'}}>
+            <header className={styles.header}>
             <div className={styles.divTitle}>
-                <button className={styles.hamburger}>
+                <button className={styles.hamburger} onClick={handleMenuClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="var(--text)" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
 	                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 	                <path d="M4 6l16 0" />
@@ -46,5 +48,7 @@ export function Header() {
 
             </div>
         </header>
+        </div>
+        
     )
 }

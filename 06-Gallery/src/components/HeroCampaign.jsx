@@ -8,10 +8,10 @@ export function HeroCampaign({product}) {
     const accentText = product?.title.slice(indexOfMidleSpace+1)
     return(
         <div className={styles.heroCampaign}>
-            <div style={{display:'flex', flexDirection:'column', gap:'0.4rem',alignItems:'center'}}>
+            <div style={{display:'flex', flexDirection:'column', gap:'0.4rem',alignItems:'center', justifyContent:'center'}}>
                 <span className={styles.campaign}>{product?.campaign}</span>
                 <h1 className={styles.title}>
-                    {normalText}<span>{accentText}</span>
+                    {normalText} <span>{accentText}</span>
                 </h1>
                 <p className={styles.description}>{product?.description}</p>
             </div>

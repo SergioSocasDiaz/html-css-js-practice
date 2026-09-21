@@ -44,11 +44,6 @@ main{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    gap: 2rem;
 
-}
-
-@media (max-width: 600px){
-    html{
-        font-size: 10px;
-    }
 }

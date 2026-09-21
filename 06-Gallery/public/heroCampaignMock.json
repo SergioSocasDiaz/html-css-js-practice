@@ -9,31 +9,32 @@
     },
     "showcase": [
         {
-            "step": "01",
-            "tag": "PIEL CURTIDA AL VEGETAL",
+            "id": "1",
+            "category": "Bolsos de Autor",
             "title": "Marroquinería de Autor",
             "description": "Objetos estructurados que adquieren pátina orgánica y memoria táctil con el paso del tiempo.",
-            "imageUrl": "https://midominio.com/images/showcase-bag.jpg",
+            "images": ["https://midominio.com/images/showcase-bag.jpg"],
             "subText": "Diseños Únicos",
-            "link": "/colecciones/marroquineria"
+            "price": "$350"
+
         },
         {
-            "step": "02",
-            "tag": "TITANIO & ZAFIRO",
+            "id": "2",
+            "category": "Relojería de Precisión",
             "title": "Orfebrería & Relojería",
             "description": "Mecanismos automáticos ensamblados bajo estrictos estándares de tolerancia y sobriedad formal.",
-            "imageUrl": "https://midominio.com/images/showcase-watch.jpg",
+            "images": ["https://midominio.com/images/showcase-watch.jpg"],
             "subText": "Series Numeradas",
-            "link": "/colecciones/relojeria"
+            "price": "$2,500"
         },
         {
-            "step": "03",
-            "tag": "FIBRAS NATURALES",
+            "id": "3",
+            "category": "Sastrería & Calzado",
             "title": "Sastrería & Calzado Esencial",
             "description": "Confección liviana y calzado con hormas anatómicas para una elegancia relajada y atemporal.",
-            "imageUrl": "https://midominio.com/images/showcase-suit.jpg",
+            "images": ["https://midominio.com/images/showcase-watch.jpg"],
             "subText": "Edición Limitada",
-            "link": "/colecciones/sastreria"
+            "price": "$1,200"
       }
     ]
     
