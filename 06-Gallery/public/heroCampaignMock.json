@@ -1,0 +1,41 @@
+{
+    "hero":{
+        "campaign": "Edición Curada - 2025",
+        "description": "Descubre la colección de bolsos que combina diseño arquitectónico con funcionalidad, perfecta para quienes buscan estilo y practicidad en su día a día.",
+        "title": "La Belleza de lo Esencial",
+        "productName": "Bolsa Arquitectónica Arc-01",
+        "imageUrl": "/assets/images/hero-bag.jpg",
+        "mod": "Colección Limitada"
+    },
+    "showcase": [
+        {
+            "id": "1",
+            "category": "Bolsos de Autor",
+            "title": "Marroquinería de Autor",
+            "description": "Objetos estructurados que adquieren pátina orgánica y memoria táctil con el paso del tiempo.",
+            "images": ["https://midominio.com/images/showcase-bag.jpg"],
+            "subText": "Diseños Únicos",
+            "price": "$350"
+
+        },
+        {
+            "id": "2",
+            "category": "Relojería de Precisión",
+            "title": "Orfebrería & Relojería",
+            "description": "Mecanismos automáticos ensamblados bajo estrictos estándares de tolerancia y sobriedad formal.",
+            "images": ["https://midominio.com/images/showcase-watch.jpg"],
+            "subText": "Series Numeradas",
+            "price": "$2,500"
+        },
+        {
+            "id": "3",
+            "category": "Sastrería & Calzado",
+            "title": "Sastrería & Calzado Esencial",
+            "description": "Confección liviana y calzado con hormas anatómicas para una elegancia relajada y atemporal.",
+            "images": ["https://midominio.com/images/showcase-watch.jpg"],
+            "subText": "Edición Limitada",
+            "price": "$1,200"
+      }
+    ]
+    
+}

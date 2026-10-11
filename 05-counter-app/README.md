@@ -11,3 +11,30 @@ I opted to generate them at the moment the element is added to the array, ensuri
 
 ## Goey Toast
 I used Goey Toast to generate toast cards that alert the user when they attempt to exceed the set limit. All of this was done to provide a better user experience.
+
+## Avoiding Mutation
+It is recommended to use immutability, like the second option I found to solve how new click records are added:
+
+```jsx
+const newActivities = [...activities]
+if(newActivities.length === 3){
+    newActivities.pop()
+}
+newActivities.unshift({
+    text: text,
+    id: crypto.randomUUID()
+})
+setActivity(newActivities)
+```
+
+As we can see, it achieves our goal, but we can point out **2 problems**:
+
+1. React compares references. We absolutely must pass a "different" array (a new reference) for it to update the state; if we directly modify the original array, React will assume it hasn't changed.
+2. We can end up working with old data due to the accumulation of clicks and the delay in state updates.
+
+For this reason, we use this better solution, which is more compact and readable. We use a function inside `setActivity` to capture the immediately preceding data and work with it:
+
+```jsx
+const newActivity = {text: text, id: crypto.randomUUID()}
+setActivity((prev) => [newActivity, ...prev].slice(0, 3))
+```
