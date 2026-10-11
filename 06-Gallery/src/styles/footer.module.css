@@ -1,0 +1,42 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+    z-index: 2;
+    background-color: var(--neutral);
+}
+.divPrimary{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.divSecondary{
+    display: flex;
+    gap: 1rem;
+}
+
+.a{
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover{
+        color: var(--primary);
+    }
+}
+
+@media (max-width: 768px){
+    .footer{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .divPrimary{
+        align-items: center;
+    }
+    .divSecondary{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        place-items: center;
+    }
+}

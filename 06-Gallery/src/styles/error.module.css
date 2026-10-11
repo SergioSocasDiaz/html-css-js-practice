@@ -1,0 +1,22 @@
+.div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.img{
+    width: 25rem;
+}
+
+.button{
+    background-color: var(--primary);
+    color: var(--neutral);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}

@@ -11,7 +11,7 @@ export function Activity({text}){
         const interval = setInterval(()=>{
             changeTime()
             
-        })
+        },60000)
         return ()=> clearInterval(interval)
     },[createdTime])
 
