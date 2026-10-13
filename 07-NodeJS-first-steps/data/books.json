@@ -1,0 +1,92 @@
+[
+  {
+    "id": "b001",
+    "title": "El nombre del viento",
+    "author": "Patrick Rothfuss",
+    "genre": "fantasy",
+    "publishedYear": 2007,
+    "available": true,
+    "createdAt": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "id": "b002",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "dystopian",
+    "publishedYear": 1949,
+    "available": false,
+    "createdAt": "2025-01-11T10:00:00.000Z"
+  },
+  {
+    "id": "b003",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "science-fiction",
+    "publishedYear": 1965,
+    "available": true,
+    "createdAt": "2025-01-12T10:00:00.000Z"
+  },
+  {
+    "id": "b004",
+    "title": "Orgullo y prejuicio",
+    "author": "Jane Austen",
+    "genre": "romance",
+    "publishedYear": 1813,
+    "available": true,
+    "createdAt": "2025-01-13T10:00:00.000Z"
+  },
+  {
+    "id": "b005",
+    "title": "Fundación",
+    "author": "Isaac Asimov",
+    "genre": "science-fiction",
+    "publishedYear": 1951,
+    "available": false,
+    "createdAt": "2025-01-14T10:00:00.000Z"
+  },
+  {
+    "id": "b006",
+    "title": "El Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "fantasy",
+    "publishedYear": 1937,
+    "available": true,
+    "createdAt": "2025-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "b007",
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "dystopian",
+    "publishedYear": 1953,
+    "available": false,
+    "createdAt": "2025-01-16T10:00:00.000Z"
+  },
+  {
+    "id": "b008",
+    "title": "Neuromante",
+    "author": "William Gibson",
+    "genre": "science-fiction",
+    "publishedYear": 1984,
+    "available": true,
+    "createdAt": "2025-01-17T10:00:00.000Z"
+  },
+  {
+    "id": "b009",
+    "title": "Crónica de una muerte anunciada",
+    "author": "Gabriel García Márquez",
+    "genre": "drama",
+    "publishedYear": 1981,
+    "available": false,
+    "createdAt": "2025-01-18T10:00:00.000Z"
+  },
+  {
+    "id": "b010",
+    "title": "Los juegos del hambre",
+    "author": "Suzanne Collins",
+    "genre": "young-adult",
+    "publishedYear": 2008,
+    "available": true,
+    "createdAt": "2025-01-19T10:00:00.000Z"
+  }
+]
